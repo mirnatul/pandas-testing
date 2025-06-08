@@ -28,3 +28,21 @@ print(df.sort_values("Date", ascending=False))
 
 # show and sort a particular column
 print(df["Date"].sort_values(ascending=False))
+
+print(df.describe())
+# also try to analyze string value
+print(df.describe(include="all"))
+
+# print(df.corr())
+
+# give the data set with specific condition (for numeric)
+print(df[df["Social Networking"] > 50])
+
+# for strting value
+print(df[df["Week Day"] == "Wednesday"])
+
+# multiple condition
+print(df[(df["Week Day"] == "Wednesday") | (df["Week Day"] == "Sunday")])
+
+# in easy way
+print(df[df["Week Day"].isin(["Wednesday", "Sunday"])])
